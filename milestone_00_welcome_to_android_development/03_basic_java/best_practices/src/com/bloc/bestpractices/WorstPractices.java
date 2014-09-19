@@ -5,34 +5,34 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class WorstPractices extends Object {
-
-// EDIT BELOW
-
+    
+    // EDIT BELOW
+    
 	public static void main(String [] args) {
-	int MAGIC_NUMBER = WorstPractices.animals(false);
-	MAGIC_NUMBER *= 5;
-	if (MAGIC_NUMBER > 18) {
-	while(MAGIC_NUMBER > 0)
-	{
-	MAGIC_NUMBER--;
+        int magicNumber = WorstPractices.getMagicNumber(false);
+        magicNumber *= 5;
+        if (magicNumber > 18) {
+            while(magicNumber > 0) {
+                magicNumber--;
+            }
+        }
 	}
-	}
-	}
-
-// animals
-// this method takes in a single parameter, yeswellheresthething. Using a very elaborate and complex algorithm, it calculate a magic number
-// yeswellheresthething: a seed which helps generate the magic number
-// returns: a magical number
-private static int animals(boolean yeswellheresthething)
-{
+    
+    // animals
+    // this method takes in a single parameter, yeswellheresthething. Using a very elaborate and complex algorithm, it calculate a magic number
+    // yeswellheresthething: a seed which helps generate the magic number
+    // returns: a magical number
+    private static int getMagicNumber (boolean seed) {
 		/*
-			Start off with one of these
-		*/
-	int anint = yeswellheresthething ? 34 : 21;
-	float sparklesfairy = .5f;
-	for (int brown = 0; brown < aInt; brown++) { sparklesfairy *= aInt;
-	} return (int) sparklesfairy * aInt;
-}
-
-// STOP EDITING
+         Start off with one of these
+         */
+        int boundary = seed ? 34 : 21;
+        float floaty = 0.5f;
+        for (int i = 0; i < boundary; i++) { 
+            floaty *= boundary; 
+        } 
+        return (int) floaty * boundary;
+    }
+    
+    // STOP EDITING
 }
