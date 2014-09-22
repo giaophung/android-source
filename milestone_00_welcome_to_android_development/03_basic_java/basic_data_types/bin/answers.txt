@@ -1,0 +1,17 @@
+Let's tackle some types!
+
+Type your answers in the command prompt and hit return to submit.
+
+Enter 'Q' if you'd like to quit.
+
+Let's get started!
+
+1. How many bits are reserved for the following number? 18. Answer: Let's tackle some types!
+
+Type your answers in the command prompt and hit return to submit.
+
+Enter 'Q' if you'd like to quit.
+
+Let's get started!
+
+1. How many bits are reserved for the following number? 18. Answer: 

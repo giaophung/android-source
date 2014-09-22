@@ -29,6 +29,14 @@ class Dog {
 	 * @return this Dog's hair length
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	float getHairLength () {
+		return mHairLength;
+	}
+
+
+	//int getHairLength (){
+		//System.out.printls (mHairLength);
+	//}
 
 	/*
 	 * setHairLength
@@ -37,12 +45,22 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void setHairLength (float hairLength) {
+		mHairLength = hairLength;
+	}
+
+	//void setHairLength (float newValue) {
+	//	mHairLength = newValue;
+	//}
 
 	/*
 	 * getGender
 	 * @return this Dog's gender
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	String getGender () {
+		return mGender;
+	}
 
 	/*
 	 * setGender
@@ -51,12 +69,18 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void setGender (String dogGender) {
+		mGender = dogGender;
+	}
 
 	/*
 	 * getSize
 	 * @return the size of the dog
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	String getSize () {
+		return mSize;
+	}
 
 	/*
 	 * setSize
@@ -65,13 +89,18 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void setSize (String dogSize) {
+		mSize = dogSize;
+	}
 
 	/*
 	 * getAge
 	 * @return this Dog's age
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	int getAge () {
+		return mAge;
+	}
 	/*
 	 * setAge
 	 * Sets the age of the Dog
@@ -79,13 +108,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setAge (dogAge) {
+		mAge = dogAge;
+	}
 	/*
 	 * getWeight
 	 * @return this Dog's weight
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	float getWeight () {
+		return mWeight;
+	}
 	/*
 	 * setWeight
 	 * Sets the weight of the Dog
@@ -93,13 +126,17 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setWeight (float dogWeight) {
+		mWeight = dogWeight;
+	}
 	/*
 	 * getColor
 	 * @return this Dog's color
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	String getColor () {
+		return mColor;
+	}
 	/*
 	 * setColor
 	 * Sets the color of the Dog
@@ -107,7 +144,9 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void setColor (String dogColor) {
+		mColor = dogColor;
+	}
 	/*
 	 * feed
 	 * Side-effect: 1. The Dog gains weight, specifically WEIGHT_GAIN
@@ -117,7 +156,20 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
-
+	void feed() {
+		//float WEIGHT_GAIN = 0.25f;
+		mWeight = mWeight + WEIGHT_GAIN; // increased weight
+		dogMeal = dogMeal + 1; // or dogMeal++
+		if (dogMeal % 3 == 0){ // mod if remainder is 0 after divided by 3. 
+			if (mSize.equals ("tiny")) {
+					mSize = "small"; 
+			} else if (mSize.equals("small")) {
+					mSize = "average";
+			} else if (mSize.equals("average")) {
+					mSize = "large";
+			}
+		} 
+	}
 	/*
 	 * play
 	 * Side-effect: 1. The Dog loses weight, specifically WEIGHT_LOSS
@@ -127,7 +179,9 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void play () {
 
+	}
 	/*
 	 * cutHair
 	 * Side-effect: the Dog's hair length is reduced by HAIR_CUT_LENGTH
@@ -135,5 +189,22 @@ class Dog {
 	 * @return nothing
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
+	void cutHair () {
 
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,8 +32,17 @@ public class Loops extends Object {
 		//********************************************************************************
 		// ASSIGNMENT:
 		// Replace the operations above with a while loop
-		//********************************************************************************
 
+          int i = 0;
+         
+          while (i < someBools.length / 2){
+               temp = someBools[someBools.length - 1 - i];
+               someBools[someBools.length - 1 - i] = someBools[i];
+               someBools[i] = temp;
+               i++;
+
+          }
+		//********************************************************************************
 
 		if (testBools(someBools)) {
 			System.out.print("Your booleans are in proper order!\n");
@@ -43,6 +52,7 @@ public class Loops extends Object {
 		}
 
 		int[] numArray = new int[someBools.length];
+		
 		// This is known as an in-line conditional
 		// learn more here: http://www.cafeaulait.org/course/week2/43.html
 
@@ -61,6 +71,11 @@ public class Loops extends Object {
 		//********************************************************************************
 		// ASSIGNMENT:
 		// Replace the operations above with a for loop
+
+		for (int i = 0; i < someBools.length; i++) {
+			numArray[i] = !someBools[i] ? 1 : 0;
+		}
+
 		//********************************************************************************
 
 		if (testInts(numArray)) {

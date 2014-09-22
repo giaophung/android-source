@@ -16,23 +16,33 @@ public class Methods extends Object {
 	}
 	// DO NOT MODIFY ABOVE
 
-
 	/*
 	 * Returns the logical opposite of a given boolean
 	 *
 	 * This method returns the logical opposite value
 	 * of its given parameter.
-	 *
+	 
 	 * @param original Is the boolean variable which must be flipped
 	 * @return the logical opposite of the original
 	 */
 	public boolean giveMeTheOpposite(boolean original) {
+
 		/************************************************
 		 * Your work goes here
+
+		 return !original;
+
+		//original = x;
+
+		//if (original != x) {
+			return true;
+		//}
+		//else
 		 ************************************************/
 
 		// You are free to modify the return statement
-		return false;
+		//return false;
+		//}
 	}
 
 	/*
@@ -50,8 +60,23 @@ public class Methods extends Object {
 	 * @return nothing
 	 */
 	public void flipTheSign(int[] numbers) {
+
 		/************************************************
 		 * Your work goes here
+
+		 for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = -numbers[i];
+		 }
+
+		 //for (int i = 0; i < numbers.length; i++) {
+		 //System.out.print (numbers[i] + (" " * -1));
+		 //}
+
+		 //flipTheSign (new int[] {1, 54, -12});
+		 //	System.out.println (1 * -1);
+		 //	System.out.println (54 * -1);
+		 //	System.out.println (-12 *-1);
+
 		 ************************************************/
 	}
 
@@ -78,12 +103,32 @@ public class Methods extends Object {
 	 * @return an array of booleans
 	 */
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
+
 		/************************************************
 		 * Your work goes here
-		 ************************************************/
+			
+			boolean[] array = new boolean[someNumber.length];
+			for (int i = 0; i < someNumbers.length; i++) {
+				array[i] = someNumbers[i] >= floor;
+			}
+				return array;
+		
+		 //if (int i = 0; i <someNumbers.length; i++)
 
-		// You are free to modify the return statement
-		return new boolean [0];
+		 //int floor = x;
+		 //int someNumbers[] = [0]; {
+			// if someNumbers [0] >= x; {
+	
+			// }
+		 	//	return[] {true};
+		// } else;
+
+		// return[] {false};
+
+		//Does my method cover an array?
+
+		 ************************************************/
+		
 	}
 
 	/*
@@ -103,12 +148,30 @@ public class Methods extends Object {
 	 * @return an array of length 2: {min, max}
 	 */
 	public int[] getMinAndMax(int[] someNumbers) {
+
 		/************************************************
 		 * Your work goes here
+
+		int smallNumber = someNumbers[0]; // set which element in the array will be the smallest number
+		int highNumber = someNumbers[0]; // set which element in the array will be the highest number
+		for (int i = 0; i < someNumbers.length; i++) {
+			if (someNumbers[i] >= highNumber) {
+				highNumber = someNumbers[i]; 
+			} 
+			if (someNumbers[i] <= smallNumber) {
+					smallNumber = someNumbers[i];
+			}
+		}
+
+		return new int[] {smallNumber, highNumber}; // return value, w/ small and high number from array
+
+		//someNumners = [];
+		//getMin =  minFunction [someNumbers];
+		//getMax = maxFunction [someNumbers];
+
+		//return {getMin, getMax};
 		 ************************************************/
 
-		// You are free to modify the return statement
-		return new int[2];
 	}
 
 
