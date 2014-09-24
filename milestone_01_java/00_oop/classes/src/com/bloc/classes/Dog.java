@@ -33,11 +33,6 @@ class Dog {
 		return mHairLength;
 	}
 
-
-	//int getHairLength (){
-		//System.out.printls (mHairLength);
-	//}
-
 	/*
 	 * setHairLength
 	 * Sets the length of the Dog's hair
@@ -48,10 +43,6 @@ class Dog {
 	void setHairLength (float hairLength) {
 		mHairLength = hairLength;
 	}
-
-	//void setHairLength (float newValue) {
-	//	mHairLength = newValue;
-	//}
 
 	/*
 	 * getGender
@@ -157,18 +148,17 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void feed() {
-		//float WEIGHT_GAIN = 0.25f;
-		mWeight = mWeight + WEIGHT_GAIN; // increased weight
-		dogMeal = dogMeal + 1; // or dogMeal++
-		if (dogMeal % 3 == 0){ // mod if remainder is 0 after divided by 3. 
-			if (mSize.equals ("tiny")) {
-					mSize = "small"; 
-			} else if (mSize.equals("small")) {
-					mSize = "average";
-			} else if (mSize.equals("average")) {
-					mSize = "large";
+		mMealCount++;
+		mWeight += WEIGHT_GAIN;
+		if (mMealCount % 3 == 0) {
+			if (mSize == "tiny") {
+				setSize("small"); // Question
+			} else if (mSize == "small") {
+				setSize("average");
+			} else if (mSize == "average") {
+				setSize("large");
 			}
-		} 
+		}
 	}
 	/*
 	 * play
@@ -180,7 +170,20 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void play () {
-
+		mWeight -= WEIGHT_LOSS;
+		mPlayInvocation++;
+		if (mPlayInvocation % 6 ==0) {
+			if (mSize == "large") {
+				setSize("average");
+			} else if (mSize == "average") {
+				setSize == "small";
+			} else if (mSize == "small") {
+				setSize("tiny");
+			}	
+		}
+		if (mWeight < MIN_WEIGHT) { //Why not "< ="?
+			mWeight = MIN_WEIGHT;
+		}
 	}
 	/*
 	 * cutHair
@@ -190,14 +193,19 @@ class Dog {
 	 */
 	// ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
 	void cutHair () {
-
+		mHairLength -= HAIR_CUT_LENGTH;
+		if mHairLength > 0f; { 
+			mHairLength = 0f;
+		}	
 	}
 }
-
-
-
-
-
+	/*Is the bellow correct as well?
+	 *void cutHair() {
+	 *	if (mHairLength >= 0f) {
+	 *		mHairLength -= HAIR_CUT_LENGTH;
+	 *	}
+	 *}
+	 */	
 
 
 

@@ -14,7 +14,11 @@ class Song extends Object {
 	 *				 and year of your choosing
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+	Song () {
+		mEnsemble = ?; //Don't understand...
+		mTitle = Title 2000;
+		mYearReleased = 2000;
+	}
 	/*
 	 * Partial Constructor
 	 * Side-effects: Sets the year of release to 0
@@ -22,7 +26,11 @@ class Song extends Object {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+	Song (Ensemble ensemble, String title) {
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = 0; //Right? or "this(emsemble, title, 0)"? what is diff?
+	}
 	/*
 	 * Full Constructor
 	 * @param ensemble the ensemble responsible
@@ -30,4 +38,8 @@ class Song extends Object {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+	Song (Ensemble ensemble, String title, int yearReleased) {
+		this.mEnsemble = ensemble;
+		this.mTitle = title;
+		this.mYearReleased = yearReleased;
 }
