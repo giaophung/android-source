@@ -81,7 +81,7 @@ public class Methods extends Object {
 		boolean[] array = new boolean[someNumbers.length]; //Question
 
 		for (int i = 0; i < someNumbers.length; i++) {
-			if (someNumbers[i] >= floor) {
+			if (someNumbers[i] >= floor) { // array[i] = (someNumbers[i] >= floor)
 				array[i] = true;
 			} else {
 				array[i] = false;
@@ -114,7 +114,7 @@ public class Methods extends Object {
 		 int min = someNumbers[0];
 		 int max = someNumbers[0];
 
-		 for (int i = 0; i < someNumbers.length; i++) {
+		 for (int i = 1; i < someNumbers.length; i++) {
 
 		 	if(someNumbers[i] > max) {
 				max = someNumbers[i];
@@ -130,7 +130,7 @@ public class Methods extends Object {
 
 		 return minMax;
 	}
-}
+
 	/****************************************************************
 	*
 	*

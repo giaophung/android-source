@@ -14,7 +14,7 @@ class Ensemble extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Ensemble (Artist[] artists) {
-		this.mArtists = artists; //or this(null, artists); - why?
+		this.mArtists = artists; //or this(null, artists)?
 	}
 
 	/*
@@ -28,10 +28,10 @@ class Ensemble extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Ensemble (String name, Artist[] artists) {
-		if (name == null) {
-			this.nName = artists[0].mFirstName + artists[0].mLastName;
+		if (name == null) { // or if(null.equals"name")?
+			this.nName = artists[0].mFirstName + artists[0].mLastName;// why use "m"?
 		} else {
-			this.nName = name;
+			this.nName = name; 
 		}
 		this.mArtists = artists;
 	}

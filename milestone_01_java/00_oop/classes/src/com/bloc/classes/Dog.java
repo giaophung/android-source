@@ -151,11 +151,11 @@ class Dog {
 		mMealCount++;
 		mWeight += WEIGHT_GAIN;
 		if (mMealCount % 3 == 0) {
-			if (mSize == "tiny") {
-				setSize("small"); // Question
-			} else if (mSize == "small") {
+			if ("tiny".equals(mSize)) { //Changed
+				setSize("small"); // 
+			} else if ("small".equals(mSize)) {
 				setSize("average");
-			} else if (mSize == "average") {
+			} else if ("average".equals(mSize)) {
 				setSize("large");
 			}
 		}
@@ -173,15 +173,15 @@ class Dog {
 		mWeight -= WEIGHT_LOSS;
 		mPlayInvocation++;
 		if (mPlayInvocation % 6 ==0) {
-			if (mSize == "large") {
+			if ("large".equals(mSize) {
 				setSize("average");
-			} else if (mSize == "average") {
-				setSize == "small";
-			} else if (mSize == "small") {
+			} else if ("average".equals(mSize)) {
+				setSize("small");
+			} else if ("small".equals(mSize)) {
 				setSize("tiny");
 			}	
 		}
-		if (mWeight < MIN_WEIGHT) { //Why not "< ="?
+		if (mWeight < MIN_WEIGHT) { //Why not "<="?
 			mWeight = MIN_WEIGHT;
 		}
 	}
@@ -199,6 +199,7 @@ class Dog {
 		}	
 	}
 }
+
 	/*Is the bellow correct as well?
 	 *void cutHair() {
 	 *	if (mHairLength >= 0f) {

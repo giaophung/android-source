@@ -15,9 +15,9 @@ class Song extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Song () {
-		mEnsemble = ?; //Don't understand...
-		mTitle = Title 2000;
-		mYearReleased = 2000;
+		this.mEnsemble = new Ensemble(new Artist[] {new Artist("Dr.", "Dre")}), "Random Song";
+		this.mTitle = TitleABC;
+		this.mYearReleased = 2000;
 	}
 	/*
 	 * Partial Constructor
@@ -29,7 +29,8 @@ class Song extends Object {
 	Song (Ensemble ensemble, String title) {
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
-		this.mYearReleased = 0; //Right? or "this(emsemble, title, 0)"? what is diff?
+		this.mYearReleased = 0; 
+		//or this(emsemble, title, 0)?
 	}
 	/*
 	 * Full Constructor
@@ -41,5 +42,7 @@ class Song extends Object {
 	Song (Ensemble ensemble, String title, int yearReleased) {
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
-		this.mYearReleased = yearReleased;
+		this.mYearReleased = yearReleased; 
+		//or this(ensemble, title, yearReleased)?
+	}	
 }

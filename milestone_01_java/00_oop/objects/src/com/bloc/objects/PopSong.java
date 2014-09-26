@@ -11,7 +11,7 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	PopSong () {
-		super (); //Trying to access the default ensemble and title constructor that's in Song and pass them through into the partial constructor?
+		super (); //Default ensemble and title constructor?
 	}
 	/*
 	 * Partial Constructor
@@ -20,11 +20,12 @@ class PopSong extends Song {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	PopSong (String ensemble, String title) {
+	PopSong (Ensemble ensemble, String title) {
 		this.mYearReleased = 0;
 		this.mEnsemble = ensemble;
 		this.mTitle = title; 
-		// or "this(0, ensemble, title)" ?
+		// Or "this(ensemble, title, 0)" ?
+		// Should  mYearReleased be seperated?
 	}
 	/*
 	 * Full Song Constructor
@@ -34,12 +35,13 @@ class PopSong extends Song {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	PopSong (String ensemble, String title, int yearReleased) {
+	PopSong (Ensemble ensemble, String title, int yearReleased) {
 		this.mYearReleased = yearReleased;
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
 		this.mWeeksOnBillboard = 0;
-		// or this(yearReleased, ensemble, title, 0)?
+		// Or this(yearReleased, ensemble, title, 0); ?
+		// Should mWeeksOnBillboard be seperated?
 	}	
 	/*
 	 * Full PopSong Constructor
@@ -50,11 +52,12 @@ class PopSong extends Song {
 	 *		  				   Billboard's top 100
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-	PopSong (String ensemble, String title, int yearReleased, int weeksOnBillboard) {
+	PopSong (Ensemble ensemble, String title, int yearReleased, int weeksOnBillboard) {
 		this.mYearReleased = yearReleased;
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
-		// or super(ensemble, title, yearReleased)
+		// or super(ensemble, title, yearReleased); ?
 		this.mWeeksOnBillboard = weeksOnBillboard;
+		this.mWeeksOnBillboard = 0; //Should this be included too?
 	}	
 }

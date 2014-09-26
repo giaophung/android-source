@@ -13,7 +13,7 @@ class Artist extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Artist (String firstName, String lastName) {
-		mFirstName = firstName;//What is the difference: "this.mFirstName = firstName;"?
-		mLastName = lastName;
+		this.mFirstName = firstName;
+		this.mLastName = lastName;
 	}
 }
