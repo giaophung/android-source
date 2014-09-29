@@ -1,7 +1,7 @@
 package com.bloc.securitypackages.colors;
 
-class Red extends Color {
-	Red() {
+public class Red extends Color {
+	public Red() {
 		super(Red.class.getSimpleName(), 255, 0, 0);
 	}
 }

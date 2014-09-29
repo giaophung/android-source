@@ -1,6 +1,6 @@
 package com.bloc.securitypackages;
 
-class Color extends Object {
+public class Color extends Object {
 	// Name of the color
 	String mName;
 	// Alpha value

@@ -15,8 +15,8 @@ class Song extends Object {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	Song () {
-		this.mEnsemble = new Ensemble(new Artist[] {new Artist("Dr.", "Dre")}), "Random Song";
-		this.mTitle = TitleABC;
+		this.mEnsemble = new Ensemble(new Artist[] {new Artist("Dr.", "Dre")});
+		this.mTitle = "TitleABC";
 		this.mYearReleased = 2000;
 	}
 	/*
@@ -30,7 +30,7 @@ class Song extends Object {
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
 		this.mYearReleased = 0; 
-		//or this(emsemble, title, 0)?
+		//or this(emsemble, title, 0)
 	}
 	/*
 	 * Full Constructor
@@ -43,6 +43,6 @@ class Song extends Object {
 		this.mEnsemble = ensemble;
 		this.mTitle = title;
 		this.mYearReleased = yearReleased; 
-		//or this(ensemble, title, yearReleased)?
+	
 	}	
 }

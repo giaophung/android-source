@@ -11,7 +11,8 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	PopSong () {
-		super (); //Default ensemble and title constructor?
+		super (); //Default ensemble and title constructor
+		this.mWeeksOnBillboard = 0;
 	}
 	/*
 	 * Partial Constructor
@@ -21,11 +22,9 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	PopSong (Ensemble ensemble, String title) {
+		super(ensemble, title);
 		this.mYearReleased = 0;
-		this.mEnsemble = ensemble;
-		this.mTitle = title; 
-		// Or "this(ensemble, title, 0)" ?
-		// Should  mYearReleased be seperated?
+
 	}
 	/*
 	 * Full Song Constructor
@@ -36,12 +35,9 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	PopSong (Ensemble ensemble, String title, int yearReleased) {
-		this.mYearReleased = yearReleased;
-		this.mEnsemble = ensemble;
-		this.mTitle = title;
+		super(ensemble, title, yearReleased);
 		this.mWeeksOnBillboard = 0;
-		// Or this(yearReleased, ensemble, title, 0); ?
-		// Should mWeeksOnBillboard be seperated?
+
 	}	
 	/*
 	 * Full PopSong Constructor
@@ -53,11 +49,7 @@ class PopSong extends Song {
 	 */
 	// CONSTRUCTOR CODE GOES HERE
 	PopSong (Ensemble ensemble, String title, int yearReleased, int weeksOnBillboard) {
-		this.mYearReleased = yearReleased;
-		this.mEnsemble = ensemble;
-		this.mTitle = title;
-		// or super(ensemble, title, yearReleased); ?
+		super(ensemble, title, yearReleased);
 		this.mWeeksOnBillboard = weeksOnBillboard;
-		this.mWeeksOnBillboard = 0; //Should this be included too?
 	}	
 }
