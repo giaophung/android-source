@@ -1,6 +1,7 @@
 package com.bloc.securitypackages;
 
-import com.bloc.securitypackages.colors.Color;
+import com.bloc.securitypackages.Color; //why Color.java and not the rest?
+//or import com.bloc.securitypackages.*; ?
 
 public abstract class Fruit extends Object {
 	// The name of the fruit

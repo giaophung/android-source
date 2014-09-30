@@ -12,11 +12,11 @@ public class Color extends Object {
 	// Blue value
 	int mBlue;
 
-	Color(int red, int green, int blue) {
+	public Color(int red, int green, int blue) {
 		this(null, red, green, blue);
 	}
 
-	Color(String name, int red, int green, int blue) {
+	public Color(String name, int red, int green, int blue) {
 		mName = name;
 		mRed = red;
 		mGreen = green;

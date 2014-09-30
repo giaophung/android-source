@@ -77,10 +77,4 @@ public abstract class Person extends Object {
 		mEyeColor = eyeColor;
 	}
 
-	/*
-	 * Abstract void
-	 methods
-	 */
-
-
 }

@@ -1,7 +1,7 @@
 package com.bloc.securitypackages.citrus;
 
 import com.bloc.securitypackages.Fruit;
-import com.bloc.securitypackages.colors.OrangeRed;
+import com.bloc.securitypackages.colors.*; //or OrangeRed?
 
 public class Grapefruit extends Fruit {
 	public Grapefruit() {

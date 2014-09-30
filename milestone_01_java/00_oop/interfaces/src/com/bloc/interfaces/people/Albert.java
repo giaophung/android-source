@@ -1,6 +1,6 @@
 package com.bloc.interfaces.people;
 
-import com.bloc.interfaces.hobbies.SalsaDancer;
+import com.bloc.interfaces.people.hobbies.*;
 
 public class Albert extends Person implements SalsaDancer {
 	public Albert() {
@@ -11,16 +11,16 @@ public class Albert extends Person implements SalsaDancer {
 	@Override
 	public void putOnShoes() {
 
-	};
+	}
 
 	@Override
 	public void findAPartner() {
 
-	};
+	}
 
 	@Override
 	public void salsa() {
 		
-	};
+	}
 
 }

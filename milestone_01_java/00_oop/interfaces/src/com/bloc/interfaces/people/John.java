@@ -1,6 +1,6 @@
 package com.bloc.interfaces.people;
 
-import com.bloc.interfaces.hobbies.Driver
+import com.bloc.interfaces.people.hobbies.*;
 
 public class John extends Person implements Driver {
 	public John() {
@@ -10,16 +10,16 @@ public class John extends Person implements Driver {
 	@Override
 	public void getInCar() {
 
-	};
+	}
 
-	Override
+	@Override
 	public void startEngine() {
 
-	};
+	}
 
-	Override
+	@Override
 	public void driveFast() {
 
-	};
+	}
 
 }
