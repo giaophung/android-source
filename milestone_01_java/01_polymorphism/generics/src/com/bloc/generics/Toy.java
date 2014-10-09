@@ -8,7 +8,7 @@ public class Toy<T extends Object> extends Object {
 		mToy = item;
 	}
 
-	public T get() {
+	public T get() { 
 		return mToy;
 	}
 }

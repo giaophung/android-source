@@ -24,6 +24,7 @@ class PopSong extends Song {
 	PopSong (Ensemble ensemble, String title) {
 		super(ensemble, title);
 		this.mYearReleased = 0;
+		this.mWeeksOnBillboard = 0;
 
 	}
 	/*

@@ -12,13 +12,14 @@ class ToyBox extends Object {
 		mToys = toys;
 	}
 
-	public void addToy(Toy<?> newToy) {
+	public int addToy(Toy<?> newToy) { 
 		Toy<?>[] toysTemp = new Toy<?>[mToys.length + 1];
 		for (int i = 0; i < mToys.length; i++) {
 			toysTemp[i] = mToys[i];
 		}
 		toysTemp[mToys.length] = newToy;
 		mToys = toysTemp;
+		return mToys.length -1; 
 	}
 
 	public Toy<?> getToyAtIndex(int index) {
