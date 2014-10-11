@@ -22,7 +22,7 @@ public class Main extends Object {
 
 		// Send messages!
 		speakerphone.shoutMessage(parent);
-		speakerphone.shoutMessage(petOwner, pet.getClass());
+		speakerphone.shoutMessage(petOwner, pet.getClass()); 
 		speakerphone.shoutMessage(singer);
 	}
 }

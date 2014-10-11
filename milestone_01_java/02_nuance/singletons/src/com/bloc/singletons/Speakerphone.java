@@ -1,21 +1,26 @@
 package com.bloc.singletons;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.lang.Class;
+
+
 /*
  * This is a singleton class which maintains communication
  * between classes and Listeners
  */
 public class Speakerphone extends Object {
 	private static Speakerphone sSpeakerphone;
-	private ArrayList<Listeners> listenerlist; 
+	private ArrayList<Listener> listenerList;;
 
 	private Speakerphone() {
-		listenerlist = new ArrayList<Listeners>();
+		listenerList = new ArrayList<Listener>();
 	}
 	/*
 	 * get
 	 * @return the singleton instance of Speakerphone
 	 */
-	public static Speakerphone get () {
+	public static Speakerphone get() {
 		if (sSpeakerphone == null) {
 			sSpeakerphone = new Speakerphone();
 		}
@@ -30,8 +35,8 @@ public class Speakerphone extends Object {
 	public void addListener(Listener listener) {
 		if (listenerList == null) {
 			listenerList = new ArrayList<Listener>();
-		}	
-			listenerlist.add(listener);
+		}
+		listenerList.add(listener);
 	}
 
 	/*
@@ -40,8 +45,9 @@ public class Speakerphone extends Object {
 	 * @param listener the Listener to remove
 	 */
 	public void removeListener(Listener listener) {
-		listenerlist.remove(listener);
+		listenerList.remove(listener);
 	}
+
 	/*
 	 * shoutMessage
 	 * Sends the message to all of the Listeners tracked by Speakerphone
@@ -79,11 +85,13 @@ public class Speakerphone extends Object {
 			}
 		}
 	}
+
 	/*
 	 * removeAll
 	 * Removes all Listeners from Speakerphone
 	 */
 	public void removeAll(){
 		listenerList = new ArrayList<Listener>();
-	}	
+	}
+
 }

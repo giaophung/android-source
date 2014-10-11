@@ -151,8 +151,8 @@ class Dog {
 		mMealCount++;
 		mWeight += WEIGHT_GAIN;
 		if (mMealCount % 3 == 0) {
-			if ("tiny".equals(mSize)) { //Changed
-				setSize("small"); // 
+			if ("tiny".equals(mSize)) { 
+				setSize("small"); 
 			} else if ("small".equals(mSize)) {
 				setSize("average");
 			} else if ("average".equals(mSize)) {
@@ -181,7 +181,7 @@ class Dog {
 				setSize("tiny");
 			}	
 		}
-		if (mWeight < MIN_WEIGHT) { //Why not "<="?
+		if (mWeight < MIN_WEIGHT) { 
 			mWeight = MIN_WEIGHT;
 		}
 	}
@@ -200,13 +200,7 @@ class Dog {
 	}
 }
 
-	/*Is the bellow correct as well?
-	 *void cutHair() {
-	 *	if (mHairLength >= 0f) {
-	 *		mHairLength -= HAIR_CUT_LENGTH;
-	 *	}
-	 *}
-	 */	
+
 
 
 

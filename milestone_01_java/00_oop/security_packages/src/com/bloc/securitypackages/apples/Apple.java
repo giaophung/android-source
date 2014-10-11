@@ -1,7 +1,7 @@
 package com.bloc.securitypackages.apples;
 
 import com.bloc.securitypackages.Fruit;
-import com.bloc.securitypackages.Color; //or is it colors?
+import com.bloc.securitypackages.Color; 
 
 public abstract class Apple extends Fruit {
 

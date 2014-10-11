@@ -5,9 +5,9 @@ package com.bloc.securitypackages;
 
 import com.bloc.securitypackages.apples.*;
 import com.bloc.securitypackages.citrus.*;
-import com.bloc.securitypackages.colors.*; //why not include .Color.java?
+import com.bloc.securitypackages.colors.*;
 import com.bloc.securitypackages.Fruit;
-// or import com.bloc.securitypackages.*; ?
+
 
 
 public class Main extends Object {
