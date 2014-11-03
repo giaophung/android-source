@@ -1,25 +1,22 @@
-package com.bloc.blocnotes4;
+package com.bloc.blocnotes;
 
 import android.app.Activity;
 
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 
 
-public class BlocNotes4 extends Activity
+public class BlocNotes extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
@@ -31,6 +28,8 @@ public class BlocNotes4 extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+
+    private NoteFragment mNoteFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +44,13 @@ public class BlocNotes4 extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        //Set up the note fragment.
+        mNoteFragment = new NoteFragment();
+        getFragmentManager().beginTransaction()
+                .add(R.id.container, mNoteFragment)
+                .commit();
+
     }
 
     @Override
@@ -82,7 +88,6 @@ public class BlocNotes4 extends Activity
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -136,7 +141,7 @@ public class BlocNotes4 extends Activity
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_bloc_notes4, container, false);
             return rootView;
         }
@@ -144,9 +149,9 @@ public class BlocNotes4 extends Activity
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((BlocNotes4) activity).onSectionAttached(
+            ((BlocNotes) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
 }
+

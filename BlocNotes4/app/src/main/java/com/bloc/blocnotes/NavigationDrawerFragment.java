@@ -1,4 +1,4 @@
-package com.bloc.blocnotes4;
+package com.bloc.blocnotes;
 
 
 import android.app.Activity;
